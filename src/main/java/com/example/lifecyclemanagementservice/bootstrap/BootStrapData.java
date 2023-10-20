@@ -28,7 +28,7 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) {
 
         // create catalog elements
-        int catalogElementsCount = 5;
+        int catalogElementsCount = 10;
 
         for (int i = 1; i <= catalogElementsCount; i++) {
             CatalogElement catalogElement = CatalogElement.builder()

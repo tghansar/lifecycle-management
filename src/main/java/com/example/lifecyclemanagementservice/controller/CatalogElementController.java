@@ -26,7 +26,7 @@ public class CatalogElementController {
         boolean validity = catalogElementServiceImpl.validateAndUpdateStatus(catalogElement, newStatus);
 
         // HTTP response
-        return (validity) ? new ResponseEntity(HttpStatus.OK): new ResponseEntity(HttpStatus.NOT_ACCEPTABLE);
+        return (validity) ? new ResponseEntity(HttpStatus.OK) : new ResponseEntity(HttpStatus.NOT_ACCEPTABLE);
     }
 
     @RequestMapping(method = RequestMethod.GET)

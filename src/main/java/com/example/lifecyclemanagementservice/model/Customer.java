@@ -3,6 +3,7 @@ package com.example.lifecyclemanagementservice.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,6 +20,6 @@ public class Customer {
     @ManyToMany
     @JoinTable(name = "catalog_element_customer",
             joinColumns = @JoinColumn(name = "customer_id"),
-            inverseJoinColumns = @JoinColumn(name = "catalog_element_id"))
-    private Set<CatalogElement> catalogElements;
+            inverseJoinColumns = @JoinColumn(name = "catalog_id"))
+    private Set<CatalogElement> catalogElements = new HashSet<>();
 }

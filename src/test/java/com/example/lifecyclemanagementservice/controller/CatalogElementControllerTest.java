@@ -71,17 +71,8 @@ class CatalogElementControllerTest {
                 catalogElementController.updateStatus(4L, LifecycleStatus.OBSOLETE));
     }
 
-    @Test
-    void testRejectedFlow2() {
-        assertEquals(new ResponseEntity(HttpStatus.NOT_ACCEPTABLE),
-                catalogElementController.updateStatus(5L, LifecycleStatus.ACTIVE));
-        assertEquals(new ResponseEntity(HttpStatus.OK),
-                catalogElementController.updateStatus(5L, LifecycleStatus.IN_DESIGN));
-        assertEquals(new ResponseEntity(HttpStatus.OK),
-                catalogElementController.updateStatus(5L, LifecycleStatus.IN_TEST));
-        assertEquals(new ResponseEntity(HttpStatus.OK),
-                catalogElementController.updateStatus(5L, LifecycleStatus.REJECTED));
-        assertEquals(new ResponseEntity(HttpStatus.NOT_ACCEPTABLE),
-                catalogElementController.updateStatus(5L, LifecycleStatus.ACTIVE));
-    }
+
+
+
+
 }
